@@ -1,4 +1,5 @@
 import java.awt.*;
+
 import javax.swing.*;
 
 public class MyCanvas extends Canvas 
@@ -9,7 +10,7 @@ public class MyCanvas extends Canvas
     		{
 	        MyCanvas canvas = new MyCanvas();
 	        JFrame frame = new JFrame();
-	        frame.setSize(400, 400);
+	        frame.setSize(500,500);
 	        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 	        frame.getContentPane().add(canvas);
 	        frame.setVisible(true);
@@ -17,7 +18,12 @@ public class MyCanvas extends Canvas
 
     public void paint(Graphics graphics) 
     		{
-	        graphics.setColor(Color.black);
-	        graphics.drawLine(40, 30, 330, 380);
+	        graphics.setColor(new Color(0,0,0));
+	        graphics.fillOval(0, 0, 500, 500);
+	        graphics.setColor(new Color(0,0,255));
+	        graphics.fillRect(100, 100, 100, 100);
+	        graphics.fillRect(300, 100, 100, 100);
+	        graphics.setColor(Color.red);
+	        graphics.fillOval(150, 300, 200, 100);   
     		}
     }
